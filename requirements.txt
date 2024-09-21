@@ -1,8 +1,11 @@
 IPython
+pydantic
 langchain
 langchain-core
 langchain-groq
 langchain-openai
-langchain-community
 langchain-mongodb
+langchain-community
 langchain-experimental
+langgrapg
+langgrapg-checkpoint

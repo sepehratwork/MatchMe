@@ -7,14 +7,14 @@ from langgraph.prebuilt import ToolNode, tools_condition
 import routers
 from utils import Utils
 from services import domains
-from database.checkpoint import MongoDBSaver, MongoClient
+# from database.checkpoint import MongoDBSaver, MongoClient
 
 
 class MatchMe:
     def __init__(self, user_id, chat_session):
         # setting a mongodb session for the user
-        MONGO_URI = "mongodb://localhost:27017/"
-        self.checkpointer = MongoDBSaver(MongoClient(MONGO_URI), f"{user_id}")
+        # MONGO_URI = "mongodb://localhost:27017/"
+        # self.checkpointer = MongoDBSaver(MongoClient(MONGO_URI), f"{user_id}")
         self.config = {"configurable": {"thread_id": f"{chat_session}"}}
         self.dom = domains.Domains()
         domain_tools, vector_store = self.dom.create_domains()
@@ -56,7 +56,7 @@ class MatchMe:
         )
         builder.add_conditional_edges(
             "Relevent Detection",
-            lambda x: x["reciever"],
+            routers.relevant_router,
             {
                 "Greeting": "Greeting", 
                 "Introduction": "Introduction", 
@@ -71,7 +71,7 @@ class MatchMe:
             {"tools": "Domains", "__end__": "Output Generation"}
         )
 
-        graph = builder.compile(checkpointer=self.checkpointer)
+        graph = builder.compile()
         
         return graph
 
@@ -81,5 +81,5 @@ class State(TypedDict):
     chat_history: list
     selected_tools: list[str]
     output_json: dict
-    reciever: str
+    reciever: Annotated[list[str], add_messages]
     cancel: bool

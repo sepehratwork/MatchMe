@@ -2,7 +2,7 @@ from typing import Literal
 
 
 def relevant_router(state) -> Literal["Greeting", "Introduction", "Irrelevant", "Cancel", "Relevant"]:
-    reciever = state["reciever"]
+    reciever = state["reciever"][-1].content
     if reciever == "Greeting":
         return "Greeting"
     if reciever == "Introduction":

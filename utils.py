@@ -4,7 +4,7 @@ import json
 from langchain_groq import ChatGroq
 from langchain_core.messages import FunctionMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from services.relevant_recognition_tools import GreetingTool, IntroductionTool, IrrelevantTool, CancelTool, RelevantTool
+from services.relevant_recognition_tools import Greeting, Introduction, Irrelevant, Cancel, Relevant
 
 
 class Utils:
@@ -31,7 +31,7 @@ class Utils:
         retrieved_histor = state["messages"][:-self.chat_history_len]
 
     def relevant_detection_node(self, state):
-        tools = [GreetingTool(), IntroductionTool(), IrrelevantTool(), CancelTool(), RelevantTool()]
+        tools = [Greeting, Introduction, Irrelevant, Cancel, Relevant]
         llm_with_tools = self.chatting_llm.bind_tools(tools)
         prompt = ChatPromptTemplate.from_messages(
             [
@@ -44,17 +44,17 @@ class Utils:
                     # " will help where you left off. Execute what you can to make progress."
                     # " If you or any of the other assistants have the final answer or deliverable,"
                     # " prefix your response with FINAL ANSWER so the team knows to stop."
-                    " Given the chat history of the user, you must choose betseen the tools you have access to."
+                    " Given the chat history of the user, you must choose between the tools you have access to with respect to the given content."
                     " You have access to the following tools: {tool_names}.",
                 ),
-                MessagesPlaceholder(variable_name="chat_history"),
+                MessagesPlaceholder(variable_name="messages"),
             ]
         )
-        prompt = prompt.partial(tool_names=", ".join([tool.name for tool in tools]))
+        prompt = prompt.partial(tool_names=", ".join([tool.title.default for tool in tools]))
         chain = prompt | llm_with_tools
         response = chain.invoke(state)
         return {
-            "reciever": dict(response)["additional_kwargs"]["tool_calls"][-1]["function"]["name"]
+            "reciever": [dict(response)["additional_kwargs"]["tool_calls"][-1]["function"]["name"]]
         }
 
     def greeting(self, state):
@@ -64,7 +64,7 @@ class Utils:
                     "system",
                     "You are a helpful and kindful assistant. The user wants to greet with you. Just answer their greetings kindly.",
                 ),
-                MessagesPlaceholder("chat_history")
+                MessagesPlaceholder("messages")
             ]
         )
         chain = prompt | self.chatting_llm
@@ -82,7 +82,7 @@ class Utils:
                     "system",
                     "You are a helpful and kindful assistant. The user is asking about your capabilities and functionalities. Your job as an asistant is to match clients and businesses together in these fields: {subjects}. With these given information introduce yourself to the user.",
                 ),
-                MessagesPlaceholder("chat_history")
+                MessagesPlaceholder("messages")
             ]
         )
         prompt = prompt.partial(subjects=", ".join([subject for subject in subjects]))
@@ -100,7 +100,7 @@ class Utils:
                     "system",
                     "You are a helpful and kindful assistant. The user have demanded for something which is beyond our capabilities. Politely tell them that you can not help them.",
                 ),
-                MessagesPlaceholder("chat_history")
+                MessagesPlaceholder("messages")
             ]
         )
         chain = prompt | self.chatting_llm
@@ -119,12 +119,11 @@ class Utils:
     # TODO generating the wanted JSON + chatting with user + removing the vector database files + adding the response to the messages
     def generate_output(self, state):
         last_message = state["messages"][-1]
-        domain = last_message.name
+        domain = state["reciever"][-1].content
         message = last_message.content
         return{
             "messages": [AIMessage(content=message, name=domain)],
             "output_json": {"domain": domain, "message": message},
-            "cancel": state["cancel"],
         }
 
 
