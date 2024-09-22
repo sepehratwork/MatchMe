@@ -2,6 +2,7 @@ import os
 import json
 
 from langchain_groq import ChatGroq
+from langchain_openai import AzureChatOpenAI
 from langchain_core.messages import FunctionMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from services.relevant_recognition_tools import Greeting, Introduction, Irrelevant, Cancel, Relevant
@@ -16,6 +17,15 @@ class Utils:
         self.chatting_llm = ChatGroq(
             model=os.getenv("groq_model_name_2"),
             temperature=0.2,
+        )
+        self.gpt = AzureChatOpenAI(
+            # model = "gpt_4_32k",
+            model = "gpt-4o",
+            api_key = "4a342430ad17498da149a9b77bf4c51f",
+            api_version = "2023-10-01-preview",
+            azure_endpoint = "https://tensurfbrain.openai.azure.com/",
+            temperature = 0,
+            streaming = False
         )
         self.chat_history_len = 1
 
@@ -39,11 +49,7 @@ class Utils:
                     "system",
                     # TODO modifying prompt engineering
                     "You are a helpful AI assistant, collaborating with other assistants."
-                    # " Use the provided tools to progress towards answering the question."
-                    # " If you are unable to fully answer, that's OK, another assistant with different tools "
-                    # " will help where you left off. Execute what you can to make progress."
-                    # " If you or any of the other assistants have the final answer or deliverable,"
-                    # " prefix your response with FINAL ANSWER so the team knows to stop."
+                    " Use the provided tools to progress towards answering the question."
                     " Given the chat history of the user, you must choose between the tools you have access to with respect to the given content."
                     " You have access to the following tools: {tool_names}.",
                 ),
