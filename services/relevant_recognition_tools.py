@@ -3,7 +3,7 @@ import json
 from typing_extensions import Optional, ClassVar
 from pydantic import BaseModel, Field
 
-subjects = list(json.load(open("services/domains.json")).keys())
+subjects = list(json.load(open("services/domains.json")))
 
 
 class Greeting(BaseModel):
@@ -76,7 +76,7 @@ class Irrelevant(BaseModel):
 The Irrelevant tool is designed to be called whenever the user's input is not related to the services, capabilities, or functionalities that the chatbot provides.
 This includes any message where the user discusses topics, asks questions, or makes statements that fall outside the scope of the chatbot's domain. 
 The primary purpose of this tool is to identify and handle inputs that are beyond the chatbot's expertise or service offerings, ensuring efficient and relevant interactions.
-Here is the list of services which the chatbot can recieve request for: {subjects}
+Here is the list of services which the chatbot can recieve request for with their description: {subjects}
 The LLM should recognize and call the Irrelevant tool when the user's input consists of, but is not limited to, the following scenarios:
 
 Unrelated Topics:
@@ -151,7 +151,7 @@ class Relevant(BaseModel):
 The Relevant tool is designed to be called whenever the user's input pertains directly to the services, capabilities, or functionalities that the chatbot provides. 
 This includes any message where the user is requesting assistance, information, or action related to the services offered by the chatbot.
 The primary purpose of this tool is to facilitate user requests that fall within the chatbot's domain, ensuring that users receive accurate and helpful responses to their inquiries or service needs.
-Here is the list of services which the chatbot can recieve request for: {subjects}
+Here is the list of services which the chatbot can recieve request for with their description: {subjects}
 
 The LLM should recognize and call the Relevant tool when the user's input consists of, but is not limited to, the following scenarios:
 Service Requests:
