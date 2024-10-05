@@ -1,14 +1,12 @@
 import json
 
-from typing_extensions import Optional, ClassVar
-from pydantic import BaseModel, Field
 
-subjects = list(json.load(open("services/domains.json")).keys())
+subjects = list(json.load(open("domains.json")))
 
-
-class Greeting(BaseModel):
-    title: ClassVar = Field("Greeting")
-    description: ClassVar = Field("""\
+tools = [
+    {
+        "name": "Greetings",
+        "description": """\
 The Greeting tool is designed to be called whenever the user's input is primarily a greeting or salutation directed toward initiating friendly or polite interaction with the chatbot. 
 This includes any message where the user expresses a standard greeting, acknowledges the chatbot's presence in a courteous manner, or engages in social pleasantries without requesting specific information or services.
 The LLM should recognize and call the Greeting tool when the user's input consists of, but is not limited to, the following scenarios:
@@ -35,14 +33,24 @@ Exclusions: Do not call the Greeting tool if the user's message contains:
 Questions about services or functionalities.
 Requests for assistance, information, or actions.
 Statements unrelated to greetings, even if they start with a greeting.\
-""")
-    system_prompt: Optional[str] = Field(None, description="A system prompt for the guidance of how the LLM should work")
-    user_prompt: Optional[list] = Field(None, description="User's chat")
-
-
-class Introduction(BaseModel):
-    title: ClassVar = Field("Introduction")
-    description: ClassVar = Field("""\
+""",
+        "inputs": {
+        "type": "object",
+        "properties": {
+            "system_prompt": {
+            "type": "string",
+            "description": "A system prompt for the guidance of how the LLM should work"
+            },
+            "user_prompt": {
+            "type": "array",
+            "description": "User's chat"
+            },
+        },
+        },
+    },
+    {
+        "name": "Introduction",
+        "description": """\
 The Introduction tool is designed to be called whenever the user's input indicates a desire to learn about the chatbot's capabilities, functionalities, services offered, or how to interact with it. 
 This includes any message where the user is asking for an overview, instructions, or assistance in understanding what the chatbot can do for them.
 The LLM should recognize and call the Introduction tool when the user's input consists of, but is not limited to, the following scenarios:
@@ -65,18 +73,28 @@ Open-ended requests for information, such as "Tell me about yourself.", "What ca
 
 Guidelines for the LLM:
 Primary Intent Focus: If the user's message is primarily about learning the capabilities or functionalities of the chatbot, the Introduction tool should be called.\
-""")
-    system_prompt: Optional[str] = Field(None, description="A system prompt for the guidance of how the LLM should work")
-    user_prompt: Optional[list] = Field(None, description="User's chat")
-
-
-class Irrelevant(BaseModel):
-    title: ClassVar = Field("Irrelevant")
-    description: ClassVar = Field(f"""\
+""",
+        "inputs": {
+        "type": "object",
+        "properties": {
+            "system_prompt": {
+            "type": "string",
+            "description": "A system prompt for the guidance of how the LLM should work"
+            },
+            "user_prompt": {
+            "type": "array",
+            "description": "User's chat"
+            },
+        },
+        },
+    },
+    {
+        "name": "Irrelevant",
+        "description": f"""\
 The Irrelevant tool is designed to be called whenever the user's input is not related to the services, capabilities, or functionalities that the chatbot provides.
 This includes any message where the user discusses topics, asks questions, or makes statements that fall outside the scope of the chatbot's domain. 
 The primary purpose of this tool is to identify and handle inputs that are beyond the chatbot's expertise or service offerings, ensuring efficient and relevant interactions.
-Here is the list of services which the chatbot can recieve request for: {subjects}
+Here is the list of services which the chatbot can recieve request for with their description: {subjects}
 The LLM should recognize and call the Irrelevant tool when the user's input consists of, but is not limited to, the following scenarios:
 
 Unrelated Topics:
@@ -100,13 +118,24 @@ Queries seeking information that is not within the chatbot's domain, such as "Ex
 
 Guidelines for the LLM:
 Primary Intent Focus: If the user's message is mainly about a topic outside the chatbot's services, the Irrelevant tool should be called.\
-""")
-    system_prompt: Optional[str] = Field(None, description="A system prompt for the guidance of how the LLM should work")
-    user_prompt: Optional[list] = Field(None, description="User's chat")
-
-
-class Cancel(BaseModel):
-    title: ClassVar = Field("""\
+""",
+        "inputs": {
+        "type": "object",
+        "properties": {
+            "system_prompt": {
+            "type": "string",
+            "description": "A system prompt for the guidance of how the LLM should work"
+            },
+            "user_prompt": {
+            "type": "array",
+            "description": "User's chat"
+            },
+        },
+        },
+    },
+    {
+        "name": "Cancel",
+        "description": """\
 The Cancel tool is designed to be called whenever the user expresses a desire to terminate, exit, or withdraw from an ongoing process related to the services provided by the chatbot.
 This includes any message where the user indicates that they no longer wish to continue with a service request, appointment, transaction, or any interaction that is part of the chatbot's domain.
 The primary purpose of this tool is to acknowledge the user's intent to cancel and to take appropriate action to cease the current process, ensuring that the user's wishes are respected promptly and accurately.
@@ -135,23 +164,29 @@ Exclusions: Do not call the Cancel tool if the user's message is:
 A general inquiry about services (should trigger the Relevant tool).
 A greeting or salutation without any cancellation intent (should trigger the Greeting tool).
 An inquiry about the chatbot's capabilities or how to use it without any cancellation intent (should trigger the Introduction tool).
-Unrelated to the chatbot's services or domain (should trigger the Irrelevant tool).
-""")
-    description: ClassVar = Field("""
-The user is going through a process throughout their chat. Now, they want to fall back and exit the on going process.
-This is the time when this tool must be called.
-""")
-    system_prompt: Optional[str] = Field(None, description="A system prompt for the guidance of how the LLM should work")
-    user_prompt: Optional[list] = Field(None, description="User's chat")
-
-
-class Relevant(BaseModel):
-    title: ClassVar = Field("Relevant")
-    description: ClassVar = Field(f"""\
+Unrelated to the chatbot's services or domain (should trigger the Irrelevant tool).\
+""",
+        "inputs": {
+        "type": "object",
+        "properties": {
+            "system_prompt": {
+            "type": "string",
+            "description": "A system prompt for the guidance of how the LLM should work"
+            },
+            "user_prompt": {
+            "type": "array",
+            "description": "User's chat"
+            },
+        },
+        },
+    },
+    {
+        "name": "Relevant",
+        "description": """\
 The Relevant tool is designed to be called whenever the user's input pertains directly to the services, capabilities, or functionalities that the chatbot provides. 
 This includes any message where the user is requesting assistance, information, or action related to the services offered by the chatbot.
 The primary purpose of this tool is to facilitate user requests that fall within the chatbot's domain, ensuring that users receive accurate and helpful responses to their inquiries or service needs.
-Here is the list of services which the chatbot can recieve request for: {subjects}
+Here is the list of services which the chatbot can recieve request for with their description: {subjects}
 
 The LLM should recognize and call the Relevant tool when the user's input consists of, but is not limited to, the following scenarios:
 Service Requests:
@@ -181,6 +216,19 @@ A greeting or salutation without a service request (should trigger the Greeting 
 An inquiry about the chatbot's capabilities or how to use it without a specific service request (should trigger the Introduction tool).
 A request to cancel a service or process (should trigger the Cancel tool).
 Unrelated to the chatbot's services or domain (should trigger the Irrelevant tool).\
-""")
-    system_prompt: Optional[str] = Field(None, description="A system prompt for the guidance of how the LLM should work")
-    user_prompt: Optional[list] = Field(None, description="User's chat")
+""",
+        "inputs": {
+        "type": "object",
+        "properties": {
+            "system_prompt": {
+            "type": "string",
+            "description": "A system prompt for the guidance of how the LLM should work"
+            },
+            "user_prompt": {
+            "type": "array",
+            "description": "User's chat"
+            },
+        },
+        },
+    },
+]
