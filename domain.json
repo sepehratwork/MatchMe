@@ -1,61 +1,496 @@
 {
     "T-shirts": {
-        "Buying": [
+        "None": [
             ""
+        ],
+        "Buying": [
+            "I want a plain black T-shirt for everyday use.",
+            "Looking for a breathable T-shirt for running.",
+            "I need a polo-style T-shirt that I can wear to semi-formal events.",
+            "Do you have XL T-shirts for tall men?",
+            "I’m interested in T-shirts with cool band logos or art prints.",
+            "Can I find a good-quality T-shirt under $20?",
+            "I want a 100% cotton T-shirt, no blends.",
+            "Looking for eco-friendly or organic T-shirts for men.",
+            "I need a light-colored T-shirt for hot weather.",
+            "Do you sell thermal T-shirts for layering in the cold?",
+            "I need a themed T-shirt for a bachelor party.",
+            "Do you have Nike or Adidas T-shirts for men?",
+            "Looking for retro-style T-shirts with faded prints.",
+            "I’m searching for slim-fit T-shirts for men.",
+            "Do you have navy blue T-shirts with no patterns?",
+            "I want a basic white T-shirt for women.",
+            "Looking for a moisture-wicking T-shirt for workouts.",
+            "Do you have trendy cropped T-shirts for women?",
+            "Do you stock plus-size women’s T-shirts?",
+            "I need a T-shirt with a floral print or artistic design.",
+            "Are there affordable T-shirts for women under $15?",
+            "I want soft, organic cotton T-shirts for women.",
+            "Looking for eco-friendly women’s T-shirts made from recycled materials.",
+            "Do you have lightweight T-shirts with short sleeves for summer?",
+            "I need long-sleeve T-shirts for women for colder weather.",
+            "I’m looking for a custom T-shirt for a bridal shower.",
+            "Do you stock Calvin Klein or Tommy Hilfiger T-shirts?",
+            "Are there any vintage graphic T-shirts for women?",
+            "I need oversized T-shirts for a comfortable fit.",
+            "I’m looking for pastel-colored T-shirts like peach or lavender."
         ], 
         "Selling": [
-            ""
+            "Selling plain black T-shirts for men, perfect for everyday use.",
+            "High-quality breathable T-shirts for running or gym sessions, available in multiple colors.",
+            "Polo T-shirts for men on sale, suitable for semi-formal occasions.",
+            "Selling men’s T-shirts in all sizes, from small to XXL.",
+            "Cool graphic T-shirts for men featuring band logos and custom art.",
+            "Affordable men’s T-shirts starting at $10, bulk orders available.",
+            "Soft 100% cotton T-shirts for men, durable and comfortable.",
+            "Selling eco-friendly men’s T-shirts made from organic and recycled materials.",
+            "Lightweight men’s T-shirts, perfect for the summer heat.",
+            "Thermal men’s T-shirts for cold weather, available now.",
+            "Custom bachelor party T-shirts for sale, designed to order.",
+            "Selling branded men’s T-shirts from Nike, Adidas, and more.",
+            "Retro men’s T-shirts with classic 90s-inspired prints.",
+            "Stylish slim-fit men’s T-shirts for sale, trendy and comfortable.",
+            "Wide range of solid-color men’s T-shirts available in navy, black, and white.",
+            "Selling basic white T-shirts for women, perfect for everyday outfits.",
+            "Moisture-wicking T-shirts for women, ideal for yoga or gym sessions.",
+            "Trendy cropped T-shirts for women on sale in various styles.",
+            "Selling plus-size T-shirts for women in fashionable designs.",
+            "Unique women’s T-shirts with floral prints and artistic graphics.",
+            "Affordable women’s T-shirts starting at $8, available in bulk.",
+            "Soft, organic cotton women’s T-shirts for sale, gentle on the skin.",
+            "Eco-friendly women’s T-shirts made from sustainable fabrics.",
+            "Light and airy women’s T-shirts for warm-weather comfort.",
+            "Selling women’s long-sleeve T-shirts for colder days.",
+            "Custom-designed T-shirts for bridal showers or themed parties.",
+            "Selling branded women’s T-shirts from Tommy Hilfiger, Gap, and more.",
+            "Retro-style women’s T-shirts featuring iconic 70s and 80s prints.",
+            "Oversized women’s T-shirts for a cozy and stylish look.",
+            "Pastel-colored T-shirts for women, including shades like peach and mint green."
         ]
     },
+    
     "Polo shirts": {
-        "Buying": [
+        "None": [
             ""
+        ],
+        "Buying": [
+            "I want a classic white polo shirt for casual wear.",
+            "Looking for a black polo shirt with a slim fit for men.",
+            "Do you have breathable polo shirts for golf?",
+            "I need a navy blue polo shirt with a pocket for work.",
+            "Searching for a polo shirt with stripes for a preppy look.",
+            "I’m looking for women’s polo shirts in pastel colors.",
+            "Do you have performance polo shirts for sports?",
+            "I need a plain polo shirt for my school uniform.",
+            "Looking for branded polo shirts like Ralph Lauren or Lacoste.",
+            "Do you sell long-sleeve polo shirts for cooler weather?",
+            "I want a polo shirt with a logo embroidered on it.",
+            "I’m searching for eco-friendly polo shirts made from organic cotton.",
+            "Looking for polo shirts under $30 for casual wear.",
+            "I need a red polo shirt for a corporate event.",
+            "Do you sell tailored-fit polo shirts for formal settings?",
+            "Looking for lightweight women’s polo shirts for summer.",
+            "Do you have moisture-wicking polo shirts for outdoor activities?",
+            "I want a yellow polo shirt with a collar trim design.",
+            "Do you have oversized polo shirts for a relaxed fit?",
+            "Looking for a polo shirt with contrasting collars and cuffs.",
+            "Do you sell unisex polo shirts suitable for all ages?",
+            "I want a high-quality knit polo shirt for semi-formal events.",
+            "Do you have polos with unique patterns or designs for women?",
+            "Looking for affordable polo shirts for team uniforms.",
+            "I need a green polo shirt with short sleeves for casual outings.",
+            "Do you sell stretch-fit polo shirts for active movement?",
+            "I’m looking for a white and navy striped polo shirt.",
+            "I need women’s polo shirts in small sizes for petite frames.",
+            "Looking for luxury polo shirts made from premium materials.",
+            "Do you have vibrant-colored polo shirts for a bold look?"
         ], 
         "Selling": [
-            ""
+            "Selling classic white polo shirts, perfect for casual or formal wear.",
+            "Men’s black slim-fit polo shirts available in all sizes.",
+            "Breathable polo shirts for golf, designed for ultimate comfort.",
+            "Selling navy blue polo shirts with pockets for workwear.",
+            "Striped polo shirts for a stylish, preppy look available now.",
+            "Women’s pastel-colored polo shirts on sale, perfect for summer.",
+            "Performance polo shirts for sports, featuring moisture-wicking material.",
+            "Plain polo shirts for school uniforms, available in bulk.",
+            "Branded polo shirts like Ralph Lauren and Lacoste for sale.",
+            "Long-sleeve polo shirts for cooler seasons, available in various colors.",
+            "Custom-embroidered polo shirts for businesses or events.",
+            "Selling eco-friendly polo shirts made from organic and recycled fabrics.",
+            "Affordable polo shirts under $30, suitable for casual occasions.",
+            "Red polo shirts available for corporate and team events.",
+            "Tailored-fit polo shirts for formal and semi-formal wear.",
+            "Lightweight women’s polo shirts designed for summer comfort.",
+            "Moisture-wicking polo shirts for outdoor activities on sale.",
+            "Yellow polo shirts with contrasting collar designs available.",
+            "Oversized polo shirts for a relaxed and comfortable fit.",
+            "Unique polos with contrasting collars and cuffs for a bold style.",
+            "Unisex polo shirts available, suitable for all age groups.",
+            "Premium knit polo shirts for semi-formal and formal settings.",
+            "Stylish women’s polo shirts with floral patterns for sale.",
+            "Affordable team uniform polo shirts, customizable for bulk orders.",
+            "Green polo shirts with short sleeves for casual or professional use.",
+            "Stretch-fit polo shirts designed for maximum flexibility and movement.",
+            "Classic striped white and navy polo shirts in stock.",
+            "Petite-sized women’s polo shirts for smaller frames available now.",
+            "Luxury polo shirts made with premium fabrics for high-end wear.",
+            "Bright and vibrant polo shirts in multiple bold colors on sale."
         ]
     },
+    
     "Blouses": {
-        "Buying": [
+        "None": [
             ""
+        ],
+        "Buying": [
+            "I’m looking for a white silk blouse for formal events.",
+            "Do you have floral-patterned blouses for casual wear?",
+            "I need a long-sleeve blouse for office meetings.",
+            "Looking for a sleeveless blouse in pastel colors.",
+            "I want a black blouse with lace detailing for evening wear.",
+            "Do you sell blouses with puffed sleeves for a vintage look?",
+            "I’m searching for oversized blouses for a comfortable fit.",
+            "Looking for a blouse with a high neckline and intricate embroidery.",
+            "Do you have affordable blouses under $20 for everyday wear?",
+            "I need a red chiffon blouse for a dinner party.",
+            "Searching for eco-friendly blouses made from organic fabrics.",
+            "Do you sell lightweight cotton blouses for summer?",
+            "I want a blouse with ruffle details for a chic outfit.",
+            "Looking for a fitted blouse with buttons down the front.",
+            "Do you have blouses in petite sizes for women?",
+            "I need a blouse with bell sleeves for a bohemian look.",
+            "Looking for a navy blue blouse with a bow tie collar.",
+            "Do you sell satin blouses for special occasions?",
+            "I’m searching for blouses with animal prints for a bold statement.",
+            "Looking for short-sleeve blouses in bright colors for casual use.",
+            "I need an off-shoulder blouse in black for a party.",
+            "Do you have maternity blouses that are stylish and comfortable?",
+            "Looking for blouses with asymmetrical hems for a trendy style.",
+            "I want a sheer blouse to pair with camisoles.",
+            "Do you sell blouses with beaded or sequined details for evening wear?",
+            "I’m looking for a green blouse with a peplum design.",
+            "Do you have classic striped blouses for office attire?",
+            "Looking for a white eyelet blouse for summer outings.",
+            "I need a blouse with a wrap design for a flattering fit.",
+            "Do you sell blouses with cap sleeves and floral embroidery?"
         ], 
         "Selling": [
-            ""
+            "Selling elegant white silk blouses for formal events.",
+            "Floral-patterned blouses available, perfect for casual outings.",
+            "Long-sleeve blouses for office wear in multiple colors.",
+            "Selling sleeveless blouses in pastel shades for summer.",
+            "Black lace-detail blouses for evening wear now in stock.",
+            "Vintage-style blouses with puffed sleeves available.",
+            "Oversized blouses for a relaxed and comfortable fit on sale.",
+            "Selling blouses with high necklines and intricate embroidery.",
+            "Affordable blouses under $20 for everyday use.",
+            "Chiffon blouses in red and other bold colors available.",
+            "Eco-friendly blouses made from sustainable fabrics for sale.",
+            "Lightweight cotton blouses ideal for summer weather.",
+            "Blouses with ruffle details for a trendy look on sale now.",
+            "Fitted blouses with button-down designs available.",
+            "Petite-size blouses in a variety of styles for smaller frames.",
+            "Bell-sleeve blouses for a bohemian aesthetic available.",
+            "Selling navy blue blouses with bow tie collars for a chic outfit.",
+            "Satin blouses for special occasions available in multiple sizes.",
+            "Animal-print blouses in bold patterns for sale.",
+            "Short-sleeve blouses in bright colors for casual wear.",
+            "Selling off-shoulder blouses in black and other colors for parties.",
+            "Stylish and comfortable maternity blouses now in stock.",
+            "Blouses with asymmetrical hems for a modern look available.",
+            "Sheer blouses perfect for layering with camisoles for sale.",
+            "Beaded and sequined blouses for evening wear in various designs.",
+            "Green blouses with peplum designs now available.",
+            "Classic striped blouses for professional office attire in stock.",
+            "White eyelet blouses perfect for summer outings on sale.",
+            "Wrap-style blouses in flattering designs now available.",
+            "Cap-sleeve blouses with floral embroidery for sale."
         ]
     },
+    
     "Dress shirts": {
-        "Buying": [
+        "None": [
             ""
+        ],
+        "Buying": [
+            "I'm looking to buy a dress shirt for a formal event.",
+            "Can you help me find a dress shirt in medium size for men?",
+            "I want to buy a white dress shirt for a business meeting.",
+            "Where can I get a dress shirt for men in large size?",
+            "I need a dress shirt in blue for my upcoming wedding.",
+            "I’m shopping for a new dress shirt for work, any recommendations?",
+            "Looking for a dress shirt with a slim fit for a business casual look.",
+            "I need a long-sleeve dress shirt in black, do you have any available?",
+            "I'm buying a dress shirt as a gift for my brother, he’s a size XL.",
+            "Can you suggest a dress shirt for a job interview?",
+            "I want to buy a dress shirt in cotton material for the summer.",
+            "Where can I find a dress shirt for a formal dinner party?",
+            "I’m looking for a dress shirt with a checkered pattern for men.",
+            "I'm shopping for a dress shirt for a corporate event, what are the options?",
+            "I need a dress shirt for a winter wedding, preferably with thick fabric.",
+            "I want to buy a dress shirt in light pink for a semi-formal event.",
+            "I need a dress shirt in a tall size, do you have any for men?",
+            "Looking for a dress shirt in a pastel color for spring season.",
+            "Can you recommend a dress shirt with a pocket for a classic look?",
+            "I want to buy a dress shirt for a casual outing with a relaxed fit.",
+            "I’m looking to buy a dress shirt for my husband for his birthday.",
+            "I’m searching for a dress shirt with cufflinks for a formal event.",
+            "Can I find a dress shirt with a spread collar for men?",
+            "I need a dress shirt with breathable fabric for warm weather.",
+            "I’m looking for a dress shirt with a floral pattern for my partner.",
+            "I’m shopping for a dress shirt with a tailored fit, what are my options?",
+            "Do you have any women's dress shirts for work in size medium?",
+            "Can I find a dress shirt for women with a subtle striped pattern?",
+            "I need a dress shirt for my wife’s upcoming conference, size small.",
+            "I’m looking for a dress shirt for women in a dark shade for an evening event."
         ], 
         "Selling": [
-            ""
-        ]
+            "I want to sell my men's dress shirts, they're in size medium.",
+            "I’m selling a brand new white dress shirt in large size.",
+            "I have some dress shirts for men in XL that I want to sell.",
+            "I'm selling a collection of dress shirts, all in different colors.",
+            "I have some gently used men's dress shirts in excellent condition for sale.",
+            "I’m selling a dress shirt with a slim fit, it's in size medium.",
+            "I have a men's dress shirt in blue that I want to sell.",
+            "I’m selling a dress shirt that’s perfect for business events.",
+            "I want to sell my dress shirts, including a few in black.",
+            "I'm looking to sell a long-sleeve dress shirt, still in brand-new condition.",
+            "I have a few dress shirts in various sizes for sale, anyone interested?",
+            "I'm selling a dress shirt in cotton fabric, perfect for summer.",
+            "I have some dress shirts with a tailored fit, selling them online.",
+            "I'm selling a white dress shirt with cufflinks, great for formal occasions.",
+            "I want to sell a collection of men's dress shirts, sizes L and XL.",
+            "I'm offering a dress shirt in a tall size for sale, good condition.",
+            "I’m selling a couple of men's dress shirts in pastel colors.",
+            "I want to sell a men's dress shirt in a relaxed fit, perfect for casual wear.",
+            "I have a gently used black dress shirt in size large that I’m selling.",
+            "I want to sell my dress shirts, including a checkered one in good condition.",
+            "I have a dress shirt with a spread collar for sale, almost new.",
+            "I’m selling a dress shirt in a floral print, it’s for women’s sizes.",
+            "I want to sell a men’s dress shirt in size medium, still in its packaging.",
+            "I have a few dress shirts in various patterns that I’m selling.",
+            "I’m selling a dress shirt in a unique fabric blend for a business casual look.",
+            "I want to sell my men's dress shirts from a recent collection, size large.",
+            "I have some dress shirts with a classic fit that I want to sell.",
+            "I'm selling a dress shirt in excellent condition, size medium.",
+            "I’m selling my men's dress shirts that are mostly white and blue.",
+            "I want to sell a women's dress shirt in a dark color for formal wear."
+        ]        
     },
+    
     "Tank tops": {
-        "Buying": [
+        "None": [
             ""
+        ],
+        "Buying": [
+            "I'm looking to buy a men's tank top for the summer.",
+            "Can you help me find a tank top in size large for men?",
+            "I need a black tank top for men, do you have any available?",
+            "I’m shopping for a tank top in cotton material for hot weather.",
+            "Looking for a comfortable tank top for running, any recommendations?",
+            "I want to buy a tank top in a medium size for a casual look.",
+            "I need a tank top in a bright color, something for summer workouts.",
+            "I'm buying a white tank top in size small for men.",
+            "Can you recommend a tank top for layering under a shirt?",
+            "I’m looking for a tank top with a graphic print, something unique.",
+            "I need a tank top in a relaxed fit for lounging around the house.",
+            "I want a tank top in an athletic fit for exercising.",
+            "Looking for a tank top in navy blue for a beach trip.",
+            "Can you help me find a tank top in a bright neon color for the gym?",
+            "I want to buy a tank top in a soft fabric for comfort.",
+            "I’m searching for a women’s tank top in size medium.",
+            "I need a tank top with a racerback style for women.",
+            "I want to buy a white tank top with a loose fit for the summer.",
+            "Can you find me a tank top in a floral print for a casual day out?",
+            "I’m looking for a tank top with a pocket for a laid-back look.",
+            "I need a women's tank top for yoga class, preferably moisture-wicking.",
+            "I’m looking for a tank top for women in pastel colors.",
+            "I need a tank top for working out in size large for women.",
+            "I’m buying a tank top with a mesh fabric for better breathability.",
+            "Can you help me find a tank top with a bold logo for men?",
+            "I’m searching for a tank top in a slim fit for a sporty look.",
+            "I want to buy a sleeveless tank top for the gym in a large size.",
+            "I need a tank top with a halter neck for a trendy look.",
+            "Looking for a tank top in a stretchy material for ease of movement.",
+            "I’m buying a tank top in a neutral color for everyday wear."
         ], 
         "Selling": [
-            ""
+            "I’m selling a men’s tank top in size medium, like new.",
+            "I have a black tank top for men that I want to sell.",
+            "I’m selling a few tank tops for men, all in size large.",
+            "I have some gently used tank tops for sale, in various colors.",
+            "I'm selling a tank top in cotton fabric, perfect for warm weather.",
+            "I want to sell a tank top in bright colors, great for the gym.",
+            "I’m selling a white tank top for men, it’s in excellent condition.",
+            "I want to sell my collection of men’s tank tops in size small.",
+            "I have a graphic tank top for men that I want to sell.",
+            "I'm selling a black tank top with a sleek design, size medium.",
+            "I have a tank top in a soft fabric that I’m looking to sell.",
+            "I’m selling a comfortable tank top in a relaxed fit.",
+            "I want to sell my athletic tank tops, they’re perfect for workouts.",
+            "I'm selling a tank top with a graphic print for men, size large.",
+            "I’m looking to sell my women’s tank tops, size medium.",
+            "I have a white tank top for women that I want to sell.",
+            "I’m selling a tank top in size small for women, barely worn.",
+            "I want to sell a floral print tank top for women.",
+            "I’m selling a women’s tank top with a racerback design.",
+            "I have a tank top in pastel colors for sale, in excellent condition.",
+            "I'm selling a lightweight tank top for hot weather, size large.",
+            "I want to sell a tank top for women in a neutral color.",
+            "I'm selling a tank top for working out, it’s made from breathable material.",
+            "I’m selling a tank top in size large for women, brand new.",
+            "I have a few women’s tank tops with fun designs that I want to sell.",
+            "I'm selling a sleeveless tank top for men, perfect for the beach.",
+            "I want to sell a tank top with a pocket for a laid-back look.",
+            "I’m selling a tank top with a sporty fit for women, size small.",
+            "I have a couple of tank tops in stretchy material that I want to sell."
         ]
     },
+
     "Crop tops": {
-        "Buying": [
+        "None": [
             ""
+        ],
+        "Buying": [
+            "I'm looking to buy a crop top for women in size medium.",
+            "Can you help me find a trendy crop top for summer?",
+            "I want to buy a black crop top for a casual look.",
+            "I need a white crop top to wear with high-waisted jeans.",
+            "Looking for a cute crop top with a floral design.",
+            "I want a crop top with a relaxed fit, preferably in cotton.",
+            "Can you recommend a crop top in pastel colors for women?",
+            "I need a cropped hoodie in size small for lounging.",
+            "I’m shopping for a long-sleeve crop top for women.",
+            "I want to buy a crop top in size large for a comfortable fit.",
+            "I need a crop top in bright colors for a fun summer outfit.",
+            "I’m looking for a ribbed crop top in a neutral color.",
+            "Can you find me a crop top with a tie-dye pattern?",
+            "I’m buying a crop top with a v-neck for a stylish look.",
+            "I want a cropped tank top in a breathable material for the gym.",
+            "I need a crop top with short sleeves for casual wear.",
+            "Looking for a crop top with a graphic print, any suggestions?",
+            "Can you recommend a cropped sweater for fall?",
+            "I want to buy a crop top with a high neckline.",
+            "I’m searching for a cropped t-shirt in size medium for everyday wear.",
+            "I’m looking for a crop top in black with a sporty vibe.",
+            "I need a crop top with a loose fit for a relaxed look.",
+            "Can you help me find a crop top with a cutout design?",
+            "I want to buy a crop top for a night out, preferably in satin.",
+            "I’m shopping for a cropped cardigan to layer over outfits.",
+            "I need a crochet-style crop top for a beach day.",
+            "I’m looking for a lace crop top for a more elegant look.",
+            "Can you suggest a crop top with a halter neck for summer?",
+            "I need a crop top with a tie at the front for a casual, chic look.",
+            "I want to buy a cropped blouse with puff sleeves."
         ], 
         "Selling": [
-            ""
-        ]
+            "I’m selling a black crop top in size medium, barely worn.",
+            "I have a cute floral crop top for women that I want to sell.",
+            "I’m selling a white crop top in size small, it’s in great condition.",
+            "I have a few crop tops for sale, all in excellent condition.",
+            "I’m selling a ribbed crop top in a neutral color.",
+            "I want to sell a cropped hoodie in size large, perfect for lounging.",
+            "I’m selling a cropped tank top in cotton, great for warm weather.",
+            "I want to sell my crop top with a graphic print, size medium.",
+            "I’m selling a long-sleeve crop top for women, still like new.",
+            "I have a trendy crop top in a bright color that I’m selling.",
+            "I’m selling a crop top in size small, made from soft fabric.",
+            "I have a lace crop top that I want to sell, perfect for evening wear.",
+            "I’m selling a cropped t-shirt in size medium for everyday use.",
+            "I want to sell a cropped sweater in a size large for fall weather.",
+            "I’m selling a crop top with a v-neck design, barely used.",
+            "I want to sell a tie-dye crop top for a casual, fun look.",
+            "I have a loose-fitting crop top in size large that I’m selling.",
+            "I’m selling a high-neck crop top in size medium, still new.",
+            "I’m offering a crochet-style crop top for sale, perfect for the beach.",
+            "I want to sell a crop top with a tie at the front, it’s size small.",
+            "I’m selling a crop top with short sleeves in size medium.",
+            "I want to sell a cropped blouse in a light fabric, perfect for summer.",
+            "I’m selling a crop top in a sporty design, ideal for the gym.",
+            "I want to sell a halter neck crop top in size small for warm weather.",
+            "I have a crop top with puff sleeves in size medium that I’m selling.",
+            "I’m selling a satin crop top, great for a night out, size medium.",
+            "I have a cute black crop top with a cutout design for sale.",
+            "I’m selling a pastel-colored crop top in size small.",
+            "I want to sell my crop top with a relaxed fit, it’s in great condition.",
+            "I’m selling a stylish cropped cardigan in excellent condition."
+        ]        
     },
+    
     "Sweatshirts": {
-        "Buying": [
+        "None": [
             ""
+        ],
+        "Buying": [
+            "I’m looking to buy a men's sweatshirt in size medium.",
+            "Can you help me find a comfortable sweatshirt for the winter?",
+            "I need a sweatshirt in black for casual outings.",
+            "I want to buy a sweatshirt with a hood in large size.",
+            "I’m shopping for a cozy sweatshirt for lounging around the house.",
+            "I want a sweatshirt with a graphic print, do you have any?",
+            "Looking for a high-quality sweatshirt in size small for men.",
+            "I need a sweatshirt in a neutral color for everyday wear.",
+            "Can you find me a sweatshirt with a zipper for easy layering?",
+            "I’m looking for a soft sweatshirt for outdoor activities.",
+            "I want to buy a sweatshirt in size large for a comfortable fit.",
+            "I need a sweatshirt with a fleece lining for colder weather.",
+            "I want a simple sweatshirt in a bright color for the gym.",
+            "I’m shopping for a sweatshirt in cotton material for a cozy feel.",
+            "I need a hoodie-style sweatshirt in size medium.",
+            "I’m looking for a women's sweatshirt in size small.",
+            "Can you recommend a sweatshirt with a retro design?",
+            "I want to buy a sweatshirt with a crewneck in size large.",
+            "I’m looking for a sweatshirt with a large logo on the front.",
+            "I want to buy a sweatshirt with a relaxed fit for a casual look.",
+            "I’m searching for a sweatshirt in pastel colors for spring.",
+            "Looking for a sweatshirt with a kangaroo pocket for comfort.",
+            "I need a sweatshirt with a bold print for a trendy style.",
+            "I want a sweatshirt in a warm material, perfect for winter weather.",
+            "Can you help me find a sweatshirt in dark grey for daily wear?",
+            "I’m looking for a sweatshirt with ribbed cuffs and hem.",
+            "I want to buy a fitted sweatshirt for a sleek look.",
+            "I’m shopping for a sweatshirt with a hood and drawstring.",
+            "I need a sweatshirt for running errands in size medium.",
+            "I want to buy a sweatshirt with a vintage design."
         ], 
         "Selling": [
-            ""
-        ]
+            "I’m selling a men’s sweatshirt in size medium, barely worn.",
+            "I have a black sweatshirt in size large that I want to sell.",
+            "I’m selling a cozy sweatshirt in size small, perfect for winter.",
+            "I want to sell a sweatshirt with a graphic print, it’s in excellent condition.",
+            "I’m selling a high-quality sweatshirt in cotton, still like new.",
+            "I want to sell a sweatshirt with a hoodie in size large.",
+            "I’m selling a sweatshirt in a neutral color, size medium.",
+            "I have a soft sweatshirt in size small that I’m looking to sell.",
+            "I’m selling a zip-up sweatshirt in good condition, size large.",
+            "I want to sell my oversized sweatshirt, it’s size medium.",
+            "I’m selling a women's sweatshirt in size small, hardly worn.",
+            "I have a warm sweatshirt in size large, perfect for winter.",
+            "I’m selling a sweatshirt with a bold graphic design for men.",
+            "I want to sell a casual sweatshirt in bright colors, size medium.",
+            "I’m selling a fleece-lined sweatshirt for extra warmth, size large.",
+            "I want to sell my sweatshirt with a crewneck design, it’s like new.",
+            "I’m selling a sweatshirt in dark grey, size medium, hardly worn.",
+            "I want to sell a sweatshirt with a kangaroo pocket, size large.",
+            "I’m selling a fitted sweatshirt, it’s in size small.",
+            "I have a sweatshirt with a retro design for sale, size medium.",
+            "I’m selling a sweatshirt in a relaxed fit for comfort, size large.",
+            "I want to sell a sweatshirt with ribbed cuffs and hem, it’s in great condition.",
+            "I have a sweatshirt in pastel colors, size small, for sale.",
+            "I’m selling a sweatshirt with a logo on the front, size medium.",
+            "I want to sell my sweatshirt in a bold print, it’s size large.",
+            "I have a lightweight sweatshirt for sale, size medium.",
+            "I’m selling a sweatshirt with a hoodie and drawstring, size large.",
+            "I want to sell a sweatshirt for casual wear, size small.",
+            "I’m selling a vintage-style sweatshirt in size medium."
+        ]        
     },
+
     "Hoodies": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -64,6 +499,9 @@
         ]
     },
     "Sweaters": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -72,6 +510,9 @@
         ]
     },
     "Cardigans": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -80,6 +521,9 @@
         ]
     },
     "Pullovers": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -88,6 +532,9 @@
         ]
     },
     "Tunics": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -96,6 +543,9 @@
         ]
     },
     "Jeans": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -104,6 +554,9 @@
         ]
     },
     "Pants": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -112,6 +565,9 @@
         ]
     },
     "Chinos": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -120,6 +576,9 @@
         ]
     },
     "Trousers": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -128,6 +587,9 @@
         ]
     },
     "Leggings": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -136,6 +598,9 @@
         ]
     },
     "Joggers": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -144,6 +609,9 @@
         ]
     },
     "Shorts": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -152,6 +620,9 @@
         ]
     },
     "Skirts": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -160,6 +631,9 @@
         ]
     },
     "Culottes": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -168,6 +642,9 @@
         ]
     },
     "Casual dresses": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -176,6 +653,9 @@
         ]
     },
     "Formal dresses": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -184,6 +664,9 @@
         ]
     },
     "Maxi dresses": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -192,6 +675,9 @@
         ]
     },
     "Midi dresses": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -200,6 +686,9 @@
         ]
     },
     "Mini dresses": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -208,6 +697,9 @@
         ]
     },
     "Cocktail dresses": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -216,6 +708,9 @@
         ]
     },
     "Sundresses": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -224,6 +719,9 @@
         ]
     },
     "Sweater dresses": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -232,6 +730,9 @@
         ]
     },
     "Shift dresses": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -240,6 +741,9 @@
         ]
     },
     "Jackets": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -248,6 +752,9 @@
         ]
     },
     "Coats": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -256,6 +763,9 @@
         ]
     },
     "Blazers": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -264,6 +774,9 @@
         ]
     },
     "Parkas": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -272,6 +785,9 @@
         ]
     },
     "Trench coats": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -280,6 +796,9 @@
         ]
     },
     "Raincoats": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -288,6 +807,9 @@
         ]
     },
     "Vests": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -296,6 +818,9 @@
         ]
     },
     "Windbreakers": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -304,6 +829,9 @@
         ]
     },
     "Bomber jackets": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -312,6 +840,9 @@
         ]
     },
     "Sports bras": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -320,6 +851,9 @@
         ]
     },
     "Athletic leggings": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -328,6 +862,9 @@
         ]
     },
     "Running shorts": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -336,6 +873,9 @@
         ]
     },
     "Workout tanks": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -344,6 +884,9 @@
         ]
     },
     "Yoga pants": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -352,6 +895,9 @@
         ]
     },
     "Gym shorts": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -360,6 +906,9 @@
         ]
     },
     "Sweatpants": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -368,6 +917,9 @@
         ]
     },
     "Compression shirts": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -376,6 +928,9 @@
         ]
     },
     "Bras": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -384,6 +939,9 @@
         ]
     },
     "Panties": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -392,6 +950,9 @@
         ]
     },
     "Boxers": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -400,6 +961,9 @@
         ]
     },
     "Briefs": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -408,6 +972,9 @@
         ]
     },
     "Boxer briefs": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -416,6 +983,9 @@
         ]
     },
     "Camisoles": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -424,6 +994,9 @@
         ]
     },
     "Slips": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -432,6 +1005,9 @@
         ]
     },
     "Shapewear": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -440,6 +1016,9 @@
         ]
     },
     "Robes": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -448,6 +1027,9 @@
         ]
     },
     "Pajamas": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -456,6 +1038,9 @@
         ]
     },
     "Sandals": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -464,6 +1049,9 @@
         ]
     },
     "Flip-flops": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -472,6 +1060,9 @@
         ]
     },
     "Casual shoes": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -480,6 +1071,9 @@
         ]
     },
     "Sneakers": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -488,6 +1082,9 @@
         ]
     },
     "Sport shoes": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -496,6 +1093,9 @@
         ]
     },
     "Running shoes": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -504,6 +1104,9 @@
         ]
     },
     "Boots": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -512,6 +1115,9 @@
         ]
     },
     "Dress shoes": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -520,6 +1126,9 @@
         ]
     },
     "Loafers": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -528,6 +1137,9 @@
         ]
     },
     "Slippers": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -536,6 +1148,9 @@
         ]
     },
     "High heels": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -544,6 +1159,9 @@
         ]
     },
     "Flats": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -552,6 +1170,9 @@
         ]
     },
     "Wedges": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -560,6 +1181,9 @@
         ]
     },
     "Espadrilles": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -568,6 +1192,9 @@
         ]
     },
     "Belts": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -576,6 +1203,9 @@
         ]
     },
     "Hats": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -584,6 +1214,9 @@
         ]
     },
     "Scarves": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -592,6 +1225,9 @@
         ]
     },
     "Gloves": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -600,6 +1236,9 @@
         ]
     },
     "Ties": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -608,6 +1247,9 @@
         ]
     },
     "Bow ties": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -616,6 +1258,9 @@
         ]
     },
     "Sunglasses": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -624,6 +1269,9 @@
         ]
     },
     "Bags (Handbags, Backpacks, Totes)": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -632,6 +1280,9 @@
         ]
     },
     "Wallets": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -640,6 +1291,9 @@
         ]
     },
     "Watches": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -648,6 +1302,9 @@
         ]
     },
     "Jewelry (Earrings, Bracelets, Necklaces)": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -656,6 +1313,9 @@
         ]
     },
     "Swimsuits": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -664,6 +1324,9 @@
         ]
     },
     "Rash guards": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -672,6 +1335,9 @@
         ]
     },
     "Beach cover-ups": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -680,6 +1346,9 @@
         ]
     },
     "Snow pants": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
@@ -688,6 +1357,9 @@
         ]
     },
     "Thermal wear": {
+        "None": [
+            ""
+        ],
         "Buying": [
             ""
         ], 
