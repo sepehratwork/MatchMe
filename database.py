@@ -1,15 +1,11 @@
 import json
-from uuid import uuid4
-from tqdm import tqdm
 from langchain_core.documents import Document
 import faiss
 from langchain_community.docstore.in_memory import InMemoryDocstore
 from langchain_community.vectorstores import FAISS
 
-from main import embeddings
 
-
-def save_domains_intents():
+def save_domains_intents_into_db(embeddings, db_path="domain_intent", json_path="domain.json"):
     domains_intents = json.load(open("domain.json", "r"))
 
     index = faiss.IndexFlatL2(len(embeddings.embed_query("MatchHub")))
@@ -24,21 +20,28 @@ def save_domains_intents():
     for domain in domains_intents.keys():
         for intent in domains_intents[domain].keys():
             examples = domains_intents[domain][intent]
-            for i, example in tqdm(enumerate(examples), desc=f"Adding examples of domain {domain} and intent {intent}"):
-                document = Document(
-                    page_content=example,
-                    metadata = {
-                        "domain": domain,
-                        "intent": intent
-                    }
-                )
-                vector_store.add_documents(documents=[document], ids=[f"{domain}_{intent}_{i}"])
+            if len(examples) > 1:
+                print(f"Adding examples of domain {domain} and intent {intent} with {len(examples)} examples")
+                for i, example in enumerate(examples):
+                    document = Document(
+                        page_content=example,
+                        metadata = {
+                            "domain": domain,
+                            "intent": intent
+                        }
+                    )
+                    vector_store.add_documents(documents=[document], ids=[f"{domain}_{intent}_{i}"])
     
     vector_store.save_local("domain_intent")
 
 
-def load_domains_intents():
+# TODO
+def add_to_vector_db(json_path, db_path="domain_intent"):
+    pass
+
+
+def load_vector_db(embeddings, path="domain_intent"):
     vector_store = FAISS.load_local(
-        "faiss_index", embeddings, allow_dangerous_deserialization=True
+        "domain_intent", embeddings, allow_dangerous_deserialization=True
     )
     return vector_store
