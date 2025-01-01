@@ -17,8 +17,8 @@ class Extractor:
         except:
             raise EnvironmentError("The given path has not been set for the vector database")
     
-    def domain_intent(self, prompt, k=1, filter=None, threshold=0.6):
-        results = self.vector_store.similarity_search_with_score(
+    def domain_intent(self, prompt, k=1, filter=None, threshold=0.2):
+        results = self.vector_store.similarity_search_with_relevance_scores(
             query=prompt,
             k=k,
             filter=filter

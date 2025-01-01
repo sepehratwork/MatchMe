@@ -42,6 +42,6 @@ def add_to_vector_db(json_path, db_path="domain_intent"):
 
 def load_vector_db(embeddings, path="domain_intent"):
     vector_store = FAISS.load_local(
-        "domain_intent", embeddings, allow_dangerous_deserialization=True
+        path, embeddings, allow_dangerous_deserialization=True
     )
     return vector_store

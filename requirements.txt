@@ -8,3 +8,7 @@ tf-keras
 pydantic
 grpcio
 grpcio-tools
+transformers
+'transformers[torch]'
+'transformers[tf-cpu]'
+'transformers[flax]'
