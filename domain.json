@@ -60,11 +60,10 @@
             "Stop and cancel all operations.",
             "I’m retracting my request; cancel.",
             "Close this matter and cancel it.",
-            "I no longer need this; cancel."
+            "I no longer need this; cancel.",
+            "دوستم یه جفت جین میخواد"
         ]
     },
-
-
 
     "T-shirts": {
         "None": [
