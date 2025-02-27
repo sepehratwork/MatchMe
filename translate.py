@@ -4,14 +4,16 @@ import tqdm
 from deep_translator import GoogleTranslator
 from langdetect import detect
 
-domains = json.load(open("domain.json", "r"))
+domains = json.load(open("domain_persian.json", "r"))
 
 for _ in range(10):
     try:
-        for domain in domains.keys():
+        for i, domain in enumerate(domains.keys()):
             for intent in domains[domain].keys():
-                for i, sample in tqdm.tqdm(enumerate(domains[domain][intent]), desc=f"{domain} - {intent}"):
-                    if detect(sample) == "en":
+                for i, sample in tqdm.tqdm(enumerate(domains[domain][intent]), desc=f"{i}/{len(domains)} {domain} - {intent}"):
+                    if detect(sample) != "en":
+                        pass
+                    else:
                         translated_text = GoogleTranslator(source='en', target='fa').translate(sample)
                         domains[domain][intent][i] = translated_text
                         json.dump(domains, open("domain_persian.json", "w"), indent=4, ensure_ascii=False)

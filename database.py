@@ -17,11 +17,11 @@ def save_domains_intents_into_db(embeddings, db_path="domain_intent_en", json_pa
         index_to_docstore_id={},
     )
 
-    for domain in domains_intents.keys():
+    for i, domain in enumerate(domains_intents.keys()):
         for intent in domains_intents[domain].keys():
             examples = domains_intents[domain][intent]
             if len(examples) > 1:
-                print(f"Adding examples of domain {domain} and intent {intent} with {len(examples)} examples")
+                print(f"Adding examples of domain {domain} {i}/{len(domains_intents)} and intent {intent} with {len(examples)} examples")
                 for i, example in enumerate(examples):
                     document = Document(
                         page_content=example,
