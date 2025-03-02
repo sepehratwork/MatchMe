@@ -1,15 +1,6 @@
 version: '3.8'
 services:
   grpc-server:
-    build:
-      context: .
-      dockerfile: Dockerfile.server
+    build: .
     ports:
       - "50051:50051"
-
-  grpc-client:
-    build:
-      context: .
-      dockerfile: Dockerfile.client
-    depends_on:
-      - grpc-server

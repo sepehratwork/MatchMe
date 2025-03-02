@@ -12,7 +12,7 @@ docker-compose up --build -d
 # Simple Test
 In one terminal:
 ```bash
-python server.py
+docker-compose up -d
 ```
 
 In the other terminal:

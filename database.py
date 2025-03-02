@@ -21,16 +21,17 @@ def save_domains_intents_into_db(embeddings, db_path="domain_intent_en", json_pa
         for intent in domains_intents[domain].keys():
             examples = domains_intents[domain][intent]
             if len(examples) > 1:
-                print(f"Adding examples of domain {domain} {i}/{len(domains_intents)} and intent {intent} with {len(examples)} examples")
-                for i, example in enumerate(examples):
+                print(f"Adding examples of domain {domain} {i+1}/{len(domains_intents)} and intent {intent} with {len(examples)} examples")
+                for j, example in enumerate(examples):
                     document = Document(
                         page_content=example,
                         metadata = {
                             "domain": domain,
-                            "intent": intent
+                            "intent": intent,
+                            "id": j
                         }
                     )
-                    vector_store.add_documents(documents=[document], ids=[f"{domain}_{intent}_{i}"])
+                    vector_store.add_documents(documents=[document], ids=[f"{domain}_{intent}_{j}"])
     
     vector_store.save_local(db_path)
 

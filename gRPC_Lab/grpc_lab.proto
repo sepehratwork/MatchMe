@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package myservices;
+
+// Service A definition
+service ServiceA {
+  rpc MethodA (RequestA) returns (ResponseA);
+}
+
+message RequestA {
+  string param = 1;
+}
+
+message ResponseA {
+  string result = 1;
+}
+
+// Service B definition
+service ServiceB {
+  rpc MethodB (RequestB) returns (ResponseB);
+}
+
+message RequestB {
+  int32 id = 1;
+}
+
+message ResponseB {
+  string message = 1;
+}

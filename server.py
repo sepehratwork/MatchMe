@@ -8,6 +8,7 @@ from main import Extractor
 extractor_en = Extractor(model_name="sentence-transformers/all-mpnet-base-v2", v_db="domain_intent_en")
 extractor_fa = Extractor(model_name="heydariAI/persian-embeddings", v_db="domain_intent_fa")
 
+
 class MessageService(MatchHub_pb2_grpc.MessageServiceServicer):
     def GetResponse(self, request, context):
         input_message = request.message
