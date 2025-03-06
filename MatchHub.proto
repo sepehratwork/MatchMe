@@ -1,13 +1,27 @@
 syntax = "proto3";
 
-service MessageService {
-  rpc GetResponse (MessageRequest) returns (MessageResponse);
+// definition of the extracting domain, intent and slot service
+service ExtractorgRPC {
+  rpc domain_intent (RequestDomainIntent) returns (ResponseDomainIntent);
 }
 
-message MessageRequest {
-  string message = 1;
+message RequestDomainIntent {
+  string request = 1;
 }
 
-message MessageResponse {
+message ResponseDomainIntent {
+  string response = 1;
+}
+
+// definition of image captioning service
+service ImageCaptioninggRPC {
+  rpc generate_caption (RequestCaption) returns (ResponseCaption);
+}
+
+message RequestCaption {
+  string request = 1;
+}
+
+message ResponseCaption {
   string response = 1;
 }

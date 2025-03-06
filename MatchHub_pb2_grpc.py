@@ -5,7 +5,7 @@ import warnings
 
 import MatchHub_pb2 as MatchHub__pb2
 
-GRPC_GENERATED_VERSION = '1.68.1'
+GRPC_GENERATED_VERSION = '1.70.0'
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
@@ -25,8 +25,9 @@ if _version_not_supported:
     )
 
 
-class MessageServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
+class ExtractorgRPCStub(object):
+    """definition of the extracting domain, intent and slot service
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -34,43 +35,45 @@ class MessageServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.GetResponse = channel.unary_unary(
-                '/MessageService/GetResponse',
-                request_serializer=MatchHub__pb2.MessageRequest.SerializeToString,
-                response_deserializer=MatchHub__pb2.MessageResponse.FromString,
+        self.domain_intent = channel.unary_unary(
+                '/ExtractorgRPC/domain_intent',
+                request_serializer=MatchHub__pb2.RequestDomainIntent.SerializeToString,
+                response_deserializer=MatchHub__pb2.ResponseDomainIntent.FromString,
                 _registered_method=True)
 
 
-class MessageServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
+class ExtractorgRPCServicer(object):
+    """definition of the extracting domain, intent and slot service
+    """
 
-    def GetResponse(self, request, context):
+    def domain_intent(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
 
-def add_MessageServiceServicer_to_server(servicer, server):
+def add_ExtractorgRPCServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'GetResponse': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetResponse,
-                    request_deserializer=MatchHub__pb2.MessageRequest.FromString,
-                    response_serializer=MatchHub__pb2.MessageResponse.SerializeToString,
+            'domain_intent': grpc.unary_unary_rpc_method_handler(
+                    servicer.domain_intent,
+                    request_deserializer=MatchHub__pb2.RequestDomainIntent.FromString,
+                    response_serializer=MatchHub__pb2.ResponseDomainIntent.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'MessageService', rpc_method_handlers)
+            'ExtractorgRPC', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('MessageService', rpc_method_handlers)
+    server.add_registered_method_handlers('ExtractorgRPC', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
-class MessageService(object):
-    """Missing associated documentation comment in .proto file."""
+class ExtractorgRPC(object):
+    """definition of the extracting domain, intent and slot service
+    """
 
     @staticmethod
-    def GetResponse(request,
+    def domain_intent(request,
             target,
             options=(),
             channel_credentials=None,
@@ -83,9 +86,84 @@ class MessageService(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/MessageService/GetResponse',
-            MatchHub__pb2.MessageRequest.SerializeToString,
-            MatchHub__pb2.MessageResponse.FromString,
+            '/ExtractorgRPC/domain_intent',
+            MatchHub__pb2.RequestDomainIntent.SerializeToString,
+            MatchHub__pb2.ResponseDomainIntent.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+
+class ImageCaptioninggRPCStub(object):
+    """definition of image captioning service
+    """
+
+    def __init__(self, channel):
+        """Constructor.
+
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.generate_caption = channel.unary_unary(
+                '/ImageCaptioninggRPC/generate_caption',
+                request_serializer=MatchHub__pb2.RequestCaption.SerializeToString,
+                response_deserializer=MatchHub__pb2.ResponseCaption.FromString,
+                _registered_method=True)
+
+
+class ImageCaptioninggRPCServicer(object):
+    """definition of image captioning service
+    """
+
+    def generate_caption(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+
+def add_ImageCaptioninggRPCServicer_to_server(servicer, server):
+    rpc_method_handlers = {
+            'generate_caption': grpc.unary_unary_rpc_method_handler(
+                    servicer.generate_caption,
+                    request_deserializer=MatchHub__pb2.RequestCaption.FromString,
+                    response_serializer=MatchHub__pb2.ResponseCaption.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'ImageCaptioninggRPC', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('ImageCaptioninggRPC', rpc_method_handlers)
+
+
+ # This class is part of an EXPERIMENTAL API.
+class ImageCaptioninggRPC(object):
+    """definition of image captioning service
+    """
+
+    @staticmethod
+    def generate_caption(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ImageCaptioninggRPC/generate_caption',
+            MatchHub__pb2.RequestCaption.SerializeToString,
+            MatchHub__pb2.ResponseCaption.FromString,
             options,
             channel_credentials,
             insecure,

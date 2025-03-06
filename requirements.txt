@@ -14,3 +14,5 @@ transformers[torch]
 transformers[tf-cpu]
 transformers[flax]
 langdetect
+torch
+pillow
