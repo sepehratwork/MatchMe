@@ -8,11 +8,7 @@ pydantic
 grpcio
 grpcio-tools
 protobuf
-# transformers
-# transformers[torch]
-# transformers[tf-cpu]
-# transformers[flax]
 langdetect
-torch
 pillow
 langdetect
+groq
