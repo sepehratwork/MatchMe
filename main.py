@@ -1,9 +1,12 @@
+import base64
 from PIL import Image
 import torch
-from transformers import Blip2Processor, Blip2ForConditionalGeneration, GitProcessor, GitForCausalLM
+from groq import Groq
+# from transformers import Blip2Processor, Blip2ForConditionalGeneration, GitProcessor, GitForCausalLM
 from langchain_huggingface import HuggingFaceEmbeddings
 from deep_translator import GoogleTranslator
 
+import config
 from database import load_vector_db
 
 
@@ -36,23 +39,26 @@ class Extractor:
 
 
 class ImageCaptioning:
-    def __init__(self, model="blip"):
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        if model == "blip":
-            self.processor = Blip2Processor.from_pretrained(
-                "Salesforce/blip2-flan-t5-xl"
-                # "Salesforce/blip2-opt-2.7b"
-                )
-            self.model = Blip2ForConditionalGeneration.from_pretrained(
-                "Salesforce/blip2-flan-t5-xl",
-                # "Salesforce/blip2-opt-2.7b",
-                torch_dtype=torch.float16
-            )
-            self.model.to(self.device)
-        elif model == "git":
-            self.processor = GitProcessor.from_pretrained("microsoft/git-base-coco")
-            self.model = GitForCausalLM.from_pretrained("microsoft/git-base-coco")
-            self.model.to(self.device)
+    def __init__(self, model="blip", local=False):
+        if not local:
+            self.client = Groq(api_key=config.groq_api_key)
+        # else:
+        #     self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        #     if model == "blip":
+        #         self.processor = Blip2Processor.from_pretrained(
+        #             "Salesforce/blip2-flan-t5-xl"
+        #             # "Salesforce/blip2-opt-2.7b"
+        #             )
+        #         self.model = Blip2ForConditionalGeneration.from_pretrained(
+        #             "Salesforce/blip2-flan-t5-xl",
+        #             # "Salesforce/blip2-opt-2.7b",
+        #             torch_dtype=torch.float16
+        #         )
+        #         self.model.to(self.device)
+        #     elif model == "git":
+        #         self.processor = GitProcessor.from_pretrained("microsoft/git-base-coco")
+        #         self.model = GitForCausalLM.from_pretrained("microsoft/git-base-coco")
+        #         self.model.to(self.device)
 
     def generate_caption(self, image_path):
         # Inputs
@@ -85,3 +91,33 @@ class ImageCaptioning:
         answer = result.split("Answer:")[-1].strip()
         answer = GoogleTranslator(source='en', target='fa').translate(answer)
         return answer
+    
+    # Function to encode the image
+    def encode_image(image_path):
+        with open(image_path, "rb") as image_file:
+            return base64.b64encode(image_file.read()).decode('utf-8')
+    
+    def generate_caption_groq(self, image_path):
+        # Getting the base64 string
+        base64_image = self.encode_image(image_path)
+
+        chat_completion = self.client.chat.completions.create(
+            messages=[
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": "What's in this image?"},
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": f"data:image/jpeg;base64,{base64_image}",
+                            },
+                        },
+                    ],
+                }
+            ],
+            model="llama-3.2-11b-vision-preview",
+        )
+
+        return chat_completion.choices[0].message.content
+
