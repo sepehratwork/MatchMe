@@ -14,6 +14,6 @@ e = time.time()
 print(f"Domain and Intent Extraction results: {answer_extractor} in {e-s:.2f}")
 
 s = time.time()
-answer_captioner = image_captioning.generate_caption(image_path="sample.jpg")
+answer_captioner = image_captioning.generate_caption_groq(image_path="sample.jpg")
 e = time.time()
 print(f"Image Captioning results: {answer_captioner} in {e-s:.2f}")

@@ -10,7 +10,7 @@ from main import Extractor, ImageCaptioning
 s = time.time()
 # extractor_en = Extractor(model_name="sentence-transformers/all-mpnet-base-v2", v_db="domain_intent_en")
 extractor_fa = Extractor(model_name="heydariAI/persian-embeddings", v_db="domain_intent_fa")
-image_captioning = ImageCaptioning(model="blip")
+image_captioning = ImageCaptioning(model="blip", local=False)
 e = time.time()
 print(f"Models loaded in {e-s:.2f} seconds")
 
@@ -31,7 +31,7 @@ class ExtractorgRPC(MatchHub_pb2_grpc.ExtractorgRPCServicer):
 class ImageCaptioninggRPC(MatchHub_pb2_grpc.ImageCaptioninggRPCServicer):
     def generate_caption(self, request, context):
         input_message = request.request
-        answer = image_captioning.generate_caption(image_path=input_message)
+        answer = image_captioning.generate_caption_groq(image_path=input_message)
         response_message = f"{answer}"
         return MatchHub_pb2.ResponseCaption(response=response_message)
 
