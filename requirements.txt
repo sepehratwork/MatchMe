@@ -12,3 +12,4 @@ langdetect
 pillow
 langdetect
 groq
+deep_translator
