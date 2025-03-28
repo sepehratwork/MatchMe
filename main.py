@@ -35,6 +35,8 @@ class Extractor:
         )
         for res, score in results:
             if score > threshold:
+                if res.metadata["intent"] == "None":
+                    res.metadata["intent"] = {}
                 return res.metadata
 
 
@@ -97,26 +99,24 @@ class ImageCaptioning:
         with open(image_path, "rb") as image_file:
             return base64.b64encode(image_file.read()).decode('utf-8')
     
-    def generate_caption_groq(self, image_path):
-        # Getting the base64 string
-        base64_image = self.encode_image(image_path)
+    def generate_caption_groq(self, url):
 
         chat_completion = self.client.chat.completions.create(
             messages=[
                 {
                     "role": "user",
                     "content": [
-                        {"type": "text", "text": "What's in this image?"},
+                        {"type": "text", "text": "Provide a thorough description of the image. Include as many as aspects and details as you can, e.g., color, brand, material, gender and etc"},
                         {
                             "type": "image_url",
                             "image_url": {
-                                "url": f"data:image/jpeg;base64,{base64_image}",
+                                "url": url,
                             },
                         },
                     ],
                 }
             ],
-            model="llama-3.2-11b-vision-preview",
+            model="llama-3.2-90b-vision-preview",
         )
 
         return chat_completion.choices[0].message.content

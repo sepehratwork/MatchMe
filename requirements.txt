@@ -10,6 +10,5 @@ grpcio-tools
 protobuf
 langdetect
 pillow
-langdetect
 groq
 deep_translator

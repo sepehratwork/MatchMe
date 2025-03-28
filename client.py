@@ -4,7 +4,7 @@ import MatchHub_pb2_grpc
 import time
 
 def run():
-    with grpc.insecure_channel('localhost:50051') as channel:
+    with grpc.insecure_channel('81.161.229.46:50051') as channel:
         s = time.time()
         stub_extractor = MatchHub_pb2_grpc.ExtractorgRPCStub(channel)
         response = stub_extractor.domain_intent(MatchHub_pb2.RequestDomainIntent(request="دوستم یه جفت جین میخواد"))
